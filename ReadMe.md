@@ -2,6 +2,8 @@
 
 ## Description
 
+VibeMail is an interactive forem connect with a supportive and empathetic community of users who share similar interests or experiences. Engage in discussions, comment on posts, and build meaningful connections with people who understand and appreciate your perspective. Choose to remain anonymous if you wish to protect your identity while venting. VibeMail respects your privacy and offers various levels of anonymity, ensuring a safe and secure space for self-expression.
+
 ## Installation
 
 - Required: node.js
