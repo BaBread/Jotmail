@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  header {
+    text-align: center;
+    background-color: #4436d7;
+    color: #fff;
+    padding: 50px;
+  }
+  h1 {
+    margin: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .container_login {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  article {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  form {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  button {
+    background-color: #13121f;
+    color: #15b3be;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .card {
+    display: flex; /* Make the card container a flex container */
+  }
+
+  .card-body {
+    flex: 1; /* Expand to take available space */
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align buttons to the start of the column */
+    margin-left: 10px; /* Adjust the margin for spacing */
+  }
+
+  .btn {
+    width: 25%; /* Make buttons full width of the container */
+    margin-bottom: 10px; /* Add spacing between buttons */
+  }
