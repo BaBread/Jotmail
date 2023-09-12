@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const withAuth = require('../utils/auth');
 const { Post } = require('../../models');
 const axios = require('axios');
 
@@ -17,10 +16,8 @@ const postData = {
     vibetype: vibetype,
     contentbody: contentbody,
     };
-});
 
-
-await axios.post(PostData),
+await axios.post(postData),
   {
     headers: {
       'Content-Type': 'application/json'
@@ -34,6 +31,25 @@ await axios.post(PostData),
     response.status(500).json(error);
     console.log(error);
   });
+});
+
+// const options = {
+//     url: 'http://localhost:3000/api/home',
+//     method: 'POST',
+//     headers: {
+//       'Accept': 'application/json',
+//       'Content-Type': 'application/json;charset=UTF-8'
+//     },
+//     data: {
+//       name: 'David',
+//       age: 45
+//     }
+//   };
+  
+//   axios(options)
+//     .then(response => {
+//       console.log(response.status);
+//     });
 
   module.exports = router;
 
