@@ -1,7 +1,51 @@
-<div class="row align-center mb-5">
+{{!-- User login form --}}
+<h1>Login!!</h1>
+<div class="container-login">
+      <!-- Login Form -->
+      <div id="loginForm" style=>
+      <h2>Login</h2>
+      {{#if login}}
+      <p>Thank you for logging {{user}}</p>
+      {{#else}}
+      <form id="login">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Login</button>
+      </form>
+      {{/if}}
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <div class="row align-center mb-5">
   <div class="col-md-6">
     <!-- Call the helper function with triple brackets to render the span as HTML -->
-    <h2>{{{get_emoji}}} Test User</h2>
+    <h2>{{{...}}} Test User</h2>
   </div>
   <div class="col-md-6">
     <h3><a href="mailto:test@gmail.com">test@gmail.com</a></h3>
@@ -9,7 +53,7 @@
 </div>
 <div class="row align-center mb-5">
   <div class="col-md-6">
-    <h2>{{{get_emoji}}} Test User</h2>
+    <h2>{{{...}}} Test User</h2>
   </div>
   <div class="col-md-6">
     <h3><a href="mailto:test@gmail.com">test@gmail.com</a></h3>
@@ -17,9 +61,9 @@
 </div>
 <div class="row align-center mb-5">
   <div class="col-md-6">
-    <h2>{{{get_emoji}}} Test User</h2>
+    <h2>{{{...}}} Test User</h2>
   </div>
   <div class="col-md-6">
     <h3><a href="mailto:test@gmail.com">test@gmail.com</a></h3>
   </div>
-</div>
+</div> --}}
