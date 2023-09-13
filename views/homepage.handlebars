@@ -1,12 +1,18 @@
 {{!-- User login form --}}
 <h1>Login!!</h1>
 <div class="container-login">
+  {{#if login}}
+  <p>You are now logged in as: {{...}}</p>
+  {{#else}}
       <!-- Login Form -->
-      <div id="loginForm" style=>
+      <div class="loginForm d-none"> <!-- login form hidden -->
       <h2>Login</h2>
+
       {{#if login}}
       <p>Thank you for logging {{user}}</p>
       {{else}}
+
+
       <form id="login">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required />
@@ -16,10 +22,8 @@
 
         <button type="submit">Login</button>
       </form>
-      {{/if}}
+  {{/if}}    
     </div>
-
-
 
 
 
