@@ -27,13 +27,16 @@ Post.init(
       },
     },
   },
+
+},
   {
-    sequelize,
-    timestamps: true,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "post",
-  }
+  sequelize,
+  timestamps: true,
+  freezeTableName: true,
+  underscored: true,
+  modelName: "post",
+  },
+
 );
 
 Post.belongsTo(User, {
