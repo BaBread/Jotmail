@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
-const User = require('./User');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
+const User = require("./User");
 class Post extends Model {}
 
 Post.init(
@@ -28,15 +28,13 @@ Post.init(
     },
   },
 
-},
   {
-  sequelize,
-  timestamps: true,
-  freezeTableName: true,
-  underscored: true,
-  modelName: "post",
-  },
-
+    sequelize,
+    timestamps: true,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "post",
+  }
 );
 
 Post.belongsTo(User, {
