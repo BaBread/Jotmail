@@ -9,7 +9,7 @@ router.get("/", withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ["password"] },
-      order: [["name", "ASC"]],
+      order: [["username", "ASC"]],
     });
     // const postData = await Post.findAll();
     // const posts = postData.map((post) => post.get({ plain: true }));
