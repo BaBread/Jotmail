@@ -10,18 +10,22 @@ router.get("/", withAuth, async (req, res) => {
     const userData = await User.findAll({
       attributes: { exclude: ["password"] },
       order: [["username", "ASC"]],
+      include: [{ model: Post}],
     });
-    
+    const users = userData.map((project) => project.get({ plain: true }));
+
     //fetch postData
     const postData = await Post.findAll();
+    // console.log(postData);
     const posts = postData.map((post) => post.get({ plain: true }));
-    const users = userData.map((project) => project.get({ plain: true }));
+    
 
     res.render("homepage", {
       users,
       posts,
       logged_in: req.session.logged_in,
     });
+
   } catch (err) {
     res.status(500).json(err);
   }
