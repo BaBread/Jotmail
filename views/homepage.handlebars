@@ -10,14 +10,15 @@
 {{/each}}
 
 {{!-- Display Posts --}}
-{{#if posts}}
-    <h2>Latest Posts</h2>
-    <ul>
-        {{#each posts}}
-        <li>{{title}}</li>
-        {{/each}}
-    </ul>
-{{/if}}
+{{#each posts as |post|}}
+  <div>
+   <h2>Latest Posts</h2>
+    <h2>{{vibetype}}</h2>
+    <h3>{{contentbody}}</h3>
+        {{!-- <li>{{title}}</li> --}}
+  </div>
+  {{/each}}
+  
 
 
 
