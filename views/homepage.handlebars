@@ -9,6 +9,16 @@
 </div>
 {{/each}}
 
+{{!-- Display Posts --}}
+{{#if posts}}
+    <h2>Latest Posts</h2>
+    <ul>
+        {{#each posts}}
+        <li>{{title}}</li>
+        {{/each}}
+    </ul>
+{{/if}}
+
 
 
 
