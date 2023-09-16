@@ -28,5 +28,5 @@ function newPostButton(event) {
   }
   
   document
-    .querySelector(".new-post-form")
+    .querySelector(".blogform") //select blogForm from DOM 
     .addEventListener("submit", newPostButton);
