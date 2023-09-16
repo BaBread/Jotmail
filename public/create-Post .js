@@ -1,4 +1,4 @@
-//New code newPOST
+// Create POST handler 
 function newPostButton(event) {
     event.preventDefault();
   
