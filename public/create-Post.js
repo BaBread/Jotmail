@@ -16,7 +16,7 @@ function newPostButton(event) {
   
     response.then((response) => {
       if (response.ok) {
-        document.location.replace("/dashboard");
+        document.location.replace("/blogPost"); // reference blogPost 
       } else {
         alert(response.statusText);
       }
