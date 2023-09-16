@@ -14,55 +14,6 @@ function UserLogin(event) {
   }
 }
 
-// old code newPOST
-
-// function to handle the "Create a New Post" button click
-//   function newPostButton(event) {
-//     event.preventDefault();
-
-//     const blogForm = document.querySelector(".card");
-//     const newPostCard = document.querySelector(".new-post-card");
-
-//     blogForm.classList.add("d-none");
-//     newPostCard.classList.remove("d-none");
-//   }
-// Add an event listener to the "Create a New Post" button
-// const newPostBtn = document.querySelector(".create-new-post-btn");
-// newPostBtn.addEventListener("click", newPostButton);
-
-//New code newPOST
-function newPostButton(event) {
-  event.preventDefault();
-
-  const userContent = document.querySelector("#userContent").value;
-
-  const response = fetch(`/api/posts`, {
-    method: "POST",
-    body: JSON.stringify({
-      userContent,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  response.then((response) => {
-    if (response.ok) {
-      document.location.replace("/dashboard");
-    } else {
-      alert(response.statusText);
-    }
-  });
-
-  const newPostCard = document.querySelector("#recent-post");
-
-  newPostCard.classList.add("d-none");
-}
-
-document
-  .querySelector(".new-post-form")
-  .addEventListener("submit", newPostButton);
-
 
 // function to handle the "Recent Post" button click
 function viewRecentPostButton(event) {
