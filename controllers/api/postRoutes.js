@@ -3,26 +3,23 @@ const { Post } = require("../../models");
 const axios = require("axios");
 
 //Posts the new Vibepost as JSON
-router.post('/api/posts', async (req, res) => {
+router.post("/", async (req, res) => {
   try {
-    const { vibetype, contentbody } = req.body;
-    const user_id = req.session.user_id;
+    // const { vibetype, contentbody } = req.body;
+    // const user_id = req.session.user_id;
 
     const newPost = await Post.create({
-      vibetype,
-      contentbody,
-      user_id,
-      id,
+      vibetype: req.body.vibetype,
+      contentbody: req.body.contentbody,
+      user_id: req.session.user_id,
     });
 
     res.status(201).json(newPost);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Internal Server Error' });
+    res.status(500).json({ message: "Internal Server Error" });
   }
 });
-
-
 
 router.delete("/:post_id", async (req, res) => {
   try {
