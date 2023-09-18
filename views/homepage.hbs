@@ -1,13 +1,65 @@
+
+ <div class="container">
+        <div class="card d-none">
+          <!-- blog post form hidden -->
+          <div class="card-body">
+            <!-- Dropdown for selecting a category -->
+            <h2 class="card-title">Logged in as:</h2>
+            <form id="blogForm">
+              <h2>Select your vibe:</h2>
+              <div class="buttons-container">
+                <div class="btn btn-success create-new-post-btn">
+                  Create a New Post
+                </div>
+                <div class="btn btn-info view-recent-post-btn">
+                  View Recent Posts
+                </div>
+              </div>
+              <div class="container">
+                <div class="col">
+                  <div class="col-md-4">
+                    <!-- Adjust the column size as needed -->
+                    <div class="scroll-container">
+                      <div class="category-scroll">
+                        <button
+                          class="category-button"
+                          data-category="technology"
+                        >
+                          Technology
+                        </button>
+                        <button class="category-button" data-category="travel">
+                          Travel
+                        </button>
+                        <button class="category-button" data-category="food">
+                          Food
+                        </button>
+                        <!-- Add more categories as needed -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
 {{!-- Display Posts --}}
 {{#each posts as |post|}}
   <div>
    <h2>Latest Posts</h2>
     <h2>{{vibetype}}</h2>
+
+    <h3>{{contentbody}}</h3>
+        {{!-- <li>{{title}}</li> --}}
+  </div>
+
     <h3>{{created_at}}</h3>
     <h3>{{contentbody}}</h3>
         {{!-- <li>{{title}}</li> --}}
   </div>
   <br><br>
+
   {{/each}}
   
 
