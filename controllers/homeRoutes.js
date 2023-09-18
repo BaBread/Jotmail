@@ -7,25 +7,36 @@ const withAuth = require("../utils/auth");
 router.get("/", withAuth, async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try {
+<<<<<<< Updated upstream
     const userData = await User.findAll({
       attributes: { exclude: ["password"] },
       order: [["username", "ASC"]],
-      include: [{ model: Post}],
+      include: [{ model: User}],
+=======
+    const userData = await Post.findAll({
+      attributes: [
+        'id',
+        'vibetype',
+        'contentbody',
+        'user_id',
+        'created_at',
+      ],
+      order: [[ 'created_at', 'DESC']],
+      include: [
+        { model: User,
+        attributes: ['username']
+      },
+      ]
+>>>>>>> Stashed changes
     });
-    const users = userData.map((project) => project.get({ plain: true }));
 
-    //fetch postData
-    const postData = await Post.findAll();
-    // console.log(postData);
-    const posts = postData.map((post) => post.get({ plain: true }));
-    
+    const posts = userData.map(post => post.get ({ plain: true}));
 
     res.render("homepage", {
-      users,
       posts,
       logged_in: req.session.logged_in,
     });
-
+  
   } catch (err) {
     res.status(500).json(err);
   }
