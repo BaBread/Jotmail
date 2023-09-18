@@ -10,7 +10,7 @@ router.get("/", withAuth, async (req, res) => {
     const userData = await User.findAll({
       attributes: { exclude: ["password"] },
       order: [["username", "ASC"]],
-      include: [{ model: Post}],
+      include: [{ model: User}],
     });
     const users = userData.map((project) => project.get({ plain: true }));
 
