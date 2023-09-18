@@ -5,9 +5,9 @@ const apiRoutes = require("./api");
 
 router.use("/", homeRoutes);
 router.use("/api", apiRoutes);
-router.get('/newPost', (req, res) => {
+router.get("/newPost", (req, res) => {
     const user_id = req.session.user_id;
-    res.render('newPost', { user_id });
+    res.render("newPost", { user_id });
 });
 
 module.exports = router;
