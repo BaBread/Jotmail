@@ -7,12 +7,6 @@ const withAuth = require("../utils/auth");
 router.get("/", withAuth, async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   try {
-<<<<<<< Updated upstream
-    const userData = await User.findAll({
-      attributes: { exclude: ["password"] },
-      order: [["username", "ASC"]],
-      include: [{ model: User}],
-=======
     const userData = await Post.findAll({
       attributes: [
         'id',
@@ -27,7 +21,6 @@ router.get("/", withAuth, async (req, res) => {
         attributes: ['username']
       },
       ]
->>>>>>> Stashed changes
     });
 
     const posts = userData.map(post => post.get ({ plain: true}));
