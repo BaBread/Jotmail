@@ -1,0 +1,21 @@
+<h2>Create a new VibePost</h2><br>
+<form class="create-post" id="newPostForm">
+    <div>
+        <select name="vibetype" id="vibetype">
+            <option value="hater">Hater</option>
+            <option value="love">Love</option>
+            <option value="help">Help</option>
+            <option value="newsflash">Newsflash</option>
+            <option value="controversy">Controversy</option>
+            <option value="quote">Quote</option>
+        </select>
+    </div>
+    <div>
+        <textarea name="contentbody" id="contentbody"></textarea>
+    </div>
+    <input type="hidden" name="user_id" id="user_id" value="{{ user_id }}">
+    <div>
+        <button type="submit">Create Post</button>
+    </div>
+</form>
+<script src="/public/js/createPost.js"></script>

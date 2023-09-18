@@ -23,10 +23,10 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create();
-app.engine("handlebars", hbs.engine);
-app.set("view engine", "handlebars");
-// app.set("views", path.join(__dirname, "views"));
+const hbs = exphbs.create({ defaultLayout: 'main', extname: '.hbs'});
+app.engine("hbs", hbs.engine);
+app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "views"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

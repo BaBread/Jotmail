@@ -1,9 +1,13 @@
 const router = require("express").Router();
 const homeRoutes = require("./homeRoutes");
-const userRoutes = require("./api/userRoutes");
+const apiRoutes = require("./api");
 // const postRoutes = require("./postRoutes");
 
 router.use("/", homeRoutes);
-router.use("/api/users/", userRoutes);
+router.use("/api", apiRoutes);
+router.get('/newPost', (req, res) => {
+    const user_id = req.session.user_id;
+    res.render('newPost', { user_id });
+});
 
 module.exports = router;
