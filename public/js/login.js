@@ -1,3 +1,5 @@
+
+
 console.log("test 1");
 const loginFormHandler = async (event) => {
   console.log("test console", event);
@@ -25,6 +27,15 @@ const loginFormHandler = async (event) => {
   }
 };
 
-document
-  .querySelector(".login-form")
-  .addEventListener("submit", loginFormHandler);
+// document.querySelector(".login-form").addEventListener("submit", loginFormHandler);
+
+
+window.onload=function(){
+  // This code runs after the DOM is fully loaded
+
+  // Select the login form
+  let loginForm = document.querySelector(".login-form");
+
+  // Add an event listener to the form's submit event
+  loginForm.addEventListener('submit', loginFormHandler);
+};
