@@ -1,91 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
   <title>VIBES</title>
 </head>
 <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      VibeMail
-    </h1>
-    <!-- Only display the logout button if the user is logged in -->
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
+  <h1>
+    VibeMail
+  </h1>
+  <!-- Only display the logout button if the user is logged in -->
+  {{#if logged_in}}
+  <nav>
+    <button class="btn" id="logout">logout</button>
+  </nav>
+  {{/if}}
 
+  <h2>Login</h2>
+
+  <form class="form login-form">
+    <div class="form-group">
+      <label for="email-login">email:</label>
+      <input class="form-input" type="text" id="email-login" />
+    </div>
+    <div class="form-group">
+      <label for="password-login">password:</label>
+      <input class="form-input" type="password" id="password-login" />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">login</button>
+    </div>
+  </form>
+
+  <script src="/js/login.js"></script>
 
 
   <div class="container">
-  <div class="card">
-    <!-- Card Header -->
-    <div class="card-header">
-      <h2 class="card-title">Logged in as:</h2>
-    </div>
-    <!-- Card Body -->
-    <div class="card-body">
-      <form id="blogForm">
-        <h2>Select your vibe:</h2>
-        
-        <!-- Buttons Container -->
-        <div class="buttons-container">
-          <a href="newPost" class="btn btn-success create-new-post-btn">
-            Create a New Post
-          </a>
-          <a href="viewPost" class="btn btn-info view-recent-post-btn">
-            View Recent Post
-          </a>
-        </div>
-        
-        <!-- Categories -->
-        <div class="container mt-3">
-  <div class="row">
-    <div class="col-md-4">
-      <!-- Add a fixed height and scrollable class to the container -->
-      <div class="scroll-container" style="max-height: 300px; overflow-y: auto;">
-        <div class="category-scroll">
-          <button class="category-button btn" data-category="hater">Hater</button>
-          <button class="category-button btn" data-category="love">Love</button>
-          <button class="category-button btn" data-category="help">Help</button>
-          <button class="category-button btn" data-category="newsflash">Newsflash</button>
-          <button class="category-button btn" data-category="controversy">Controversy</button>
-          <button class="category-button btn" data-category="quote">Quote</button>
-          <!-- Add more categories as needed -->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    <div class="card">
+      <!-- Card Header -->
+      <div class="card-header">
 
-  </header>
+      </div>
+      <!-- Card Body -->
+      <div class="card-body">
+        <form id="blogForm">
+          <h2>Select your vibe:</h2>
+
+          <!-- Buttons Container -->
+          <div class="buttons-container">
+            <a href="newPost" class="btn btn-success create-new-post-btn">
+              Create a New Post
+            </a>
+            <a href="/" class="btn btn-info view-recent-post-btn">
+              View Recent Post
+            </a>
+          </div>
+
+          <!-- Categories -->
+          <div class="container mt-3">
+            <div class="row">
+              <div class="col-md-4">
+                <!-- Add a fixed height and scrollable class to the container -->
+                <div class="scroll-container" style="max-height: 300px; overflow-y: auto;">
+                  <div class="category-scroll">
+                    <button class="category-button btn" data-category="hater">Hater</button>
+                    <button class="category-button btn" data-category="love">Love</button>
+                    <button class="category-button btn" data-category="help">Help</button>
+                    <button class="category-button btn" data-category="newsflash">Newsflash</button>
+                    <button class="category-button btn" data-category="controversy">Controversy</button>
+                    <button class="category-button btn" data-category="quote">Quote</button>
+                    <!-- Add more categories as needed -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+</header>
+
 <body>
   <div class="container"></div>
   {{{body}}}
 </body>
 <footer>
-      
-  </footer>
 
-  <!-- Only include the logout script if the user is logged in -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+</footer>
 
-  <script src="/js/viewPost.js"></script>
+<!-- Only include the logout script if the user is logged in -->
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
+
+<script src="/js/viewPost.js"></script>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
