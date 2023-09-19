@@ -1,4 +1,6 @@
+console.log("test 1");
 const loginFormHandler = async (event) => {
+  console.log("test console", event);
   // Stop the browser from submitting the form so we can do so with JavaScript
   event.preventDefault();
 
@@ -7,6 +9,7 @@ const loginFormHandler = async (event) => {
   const password = document.querySelector("#password-login").value.trim();
 
   if (email && password) {
+    console.log("test console", email, password);
     // Send the e-mail and password to the server
     const response = await fetch("/api/users/login", {
       method: "POST",
@@ -24,4 +27,4 @@ const loginFormHandler = async (event) => {
 
 document
   .querySelector(".login-form")
-.addEventListener("submit", loginFormHandler);
+  .addEventListener("submit", loginFormHandler);
