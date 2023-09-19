@@ -1,6 +1,6 @@
   {{#if posts.length}}
 <section>
-  <h2>Vibe Posts</h2>
+  <h2>{{vibetype}} Posts</h2>
   <ol>
     {{#each posts as |post|}}
      
@@ -13,57 +13,10 @@
                 <p>{{contentbody}}</p>
             </div>
         </article>
-          <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+          
         </li>
 
-      <div class="vibe-selected-card" id="vibe">
-        <!-- vibe selected hidden -->
-        <h2 class="card-header">Vibe Selected:</h2>
-        <div class="card-body">
-          <textarea
-            id="userContent"
-            name="userContent"
-            class="form-control"
-            rows="4"
-            placeholder="Create your vibe here"
-          ></textarea>
-          <div class="btn btn-primary">Go home</div>
-        </div>
-      </div>
-
-      <!-- new post -->
-
-      <div class="new-post-card" id="new-post">
-        <!--new post hidden -->
-        <h2 class="card-header">New Post</h2>
-        <div class="card-body">
-          <textarea
-            id="userContent"
-            name="userContent"
-            class="form-control"
-            rows="4"
-            placeholder="Create your vibe here"
-          ></textarea>
-          <div class="btn btn-success">Save</div>
-          <div class="btn btn-primary">Go home</div>
-        </div>
-      </div>
-
-      <!-- recent Post  -->
-
-      <div class="recent-post-card" id="recent-post">
-        <!-- recent Post hidden  -->
-        <h2 class="card-header">Recent Post</h2>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">
-            With supporting text below as a natural lead-in to additional
-            content.
-          </p>
-          <div class="btn btn-primary">Go home</div>
-        </div>
-      </div>
-    </div>
+      
 
     {{/each}}
   </ol>
