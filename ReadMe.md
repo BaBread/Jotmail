@@ -19,6 +19,7 @@ VibeMail is an interactive forem connect with a supportive and empathetic commun
 - Heroku
 - eslintrc.json
 - prettier
+- luxon
 
 # Installation & Database SetUp
 
