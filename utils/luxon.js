@@ -1,9 +1,6 @@
 const { DateTime } = require("luxon");
 module.exports = {
   format_date: (date, format) => {
-    // 'date' should be a JavaScript Date object or a date string
-    // 'format' is an optional parameter for the Luxon format string
-    // If 'date' is a date string, parse it into a Date object
     if (typeof date === "string") {
       date = new Date(date);
     }
