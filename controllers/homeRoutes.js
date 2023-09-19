@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Post = require("../models/Post");
 const User = require("../models/User");
 const withAuth = require("../utils/auth");
-// const axios = require('axios');
+
 
 router.get("/", withAuth, async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
