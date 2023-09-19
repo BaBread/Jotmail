@@ -29,37 +29,9 @@ router.get("/newPost", (req, res) => {
   res.render("newPost", { user_id });
 });
 
-// router.get('/', withAuth, (req, res) => {
-//   Post.findAll({
-//     where: {
-//       user_id: req.session.user_id
-//     },
-//     attributes: [
-//       "id",
-//       "user_id",
-//       "vibetype",
-//       "contentbody",
-//     ],
-//     include: [
-//       {
-//         model: User,
-//         attributes: ["id", "user_id", "vibetype", "contentbody"],
-//         include: {
-//           model: User,
-//           attributes: ['username']
-//         }
-//       },
-//     ]
-//   })
-//     .then(dbPostData => {
-//       const posts = dbPostData.map(post => post.get({ plain: true }));
-//       res.render('dashboard', { posts, loggedIn: true });
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
+router.get("/viewPost", (req, res) => {
+  res.render("viewPost", { vibetype });
+});
 
 router.get("/login", (req, res) => {
   // If a session exists, redirect the request to the homepage
