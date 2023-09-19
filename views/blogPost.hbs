@@ -1,12 +1,15 @@
- {{!-- <div class="container">
-        <div class="card d-none">
-          <!-- blog post form hidden -->
-          <div class="card-body">
-            <!-- Dropdown for selecting a category -->
-            <h2 class="card-title">Logged in as:</h2>
-            <form id="blogForm">
-              <h2>Select your vibe:</h2>
-              <div class="buttons-container">
+<div class="container">
+  <div class="card">
+    <!-- blog post form hidden -->
+    <div class="card-body">
+      <!-- Dropdown for selecting a category -->
+      <h2 class="card-title">Logged in as:</h2>
+      <form id="blogForm">
+        <h2>Select your vibe:</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+              <div class="buttons-container d-flex justify-content-end">
                 <div class="btn btn-success create-new-post-btn">
                   Create a New Post
                 </div>
@@ -14,72 +17,27 @@
                   View Recent Post
                 </div>
               </div>
-              <div class="container">
-                <div class="col">
-                  <div class="col-md-4">
-                    <!-- Adjust the column size as needed -->
-                    <div class="scroll-container">
-                      <div class="category-scroll">
-                        <button
-                          class="category-button"
-                          data-category="technology"
-                        >
-                          Technology
-                        </button>
-                        <button class="category-button" data-category="travel">
-                          Travel
-                        </button>
-                        <button class="category-button" data-category="food">
-                          Food
-                        </button>
-                        <!-- Add more categories as needed -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
-      </div>
-
-<script src="../public/js/create-Post.js"></script> --}}
-
-
-  <div class="container">
-    <div class="card ">
-      <!-- blog post form hidden -->
-      <div class="card-body">
-        <!-- Dropdown for selecting a category -->
-        <h2 class="card-title">Logged in as:</h2>
-        <form id="blogForm">
-          <h2>Select your vibe:</h2>
-          <div class="buttons-container">
-            <div class="btn btn-success create-new-post-btn">
-              Create a New Post
-            </div>
-            <div class="btn btn-info view-recent-post-btn">
-              View Recent Post
-            </div>
-          </div>
-          <div class="container">
-            <div class="col">
-              <div class="col-md-4">
-                <!-- Adjust the column size as needed -->
-                <div class="scroll-container">
-                  <div class="category-scroll">
-                    {{#each categories}}
-                      <button class="category-button" data-category="{{this}}">
-                        {{this}}
-                      </button>
-                    {{/each}}
-                  </div>
+        <div class="container">
+          <div class="col">
+            <div class="col-md-4">
+              <!-- Adjust the column size as needed -->
+              <div class="scroll-container">
+                <div class="category-scroll">
+                  {{#each categories}}
+                    <button class="category-button" data-category="{{this}}">
+                      {{this}}
+                    </button>
+                  {{/each}}
                 </div>
               </div>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
-<script src="../public/js/create-Post.js"></script> 
+</div>
+<script src="../public/js/create-Post.js"></script>
