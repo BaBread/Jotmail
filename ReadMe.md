@@ -37,7 +37,7 @@ In order to use this app on VS, install the node dependencies shown on package.j
 
 # Heroku Deployment
 
-[You can check out my app here]()
+[You can check out my app here](https://vibemail-f86679599564.herokuapp.com/)
 
 # License
 
@@ -48,8 +48,11 @@ In order to use this app on VS, install the node dependencies shown on package.j
 ​Contributors:
 
 Charles "IN CHARGE" Chavis
+
 Donald "THE DON" Leon
+
 Robert "HAS TOO MANY NAMES" Campbell Van Vliet II
+
 Ricky "BIG MONEY" Carter
 
 ## Credits

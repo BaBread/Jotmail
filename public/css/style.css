@@ -73,6 +73,16 @@ button {
 .btn {
   width: 25%; /* Make buttons full width of the container */
   margin-bottom: 20px; /* Add spacing between buttons */
+  background-color: #13121f;
+  color: #15b3be;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #15b3be;
+  color: #13121f;
 }
 
 .submit-btn-container {
@@ -109,4 +119,53 @@ button {
 .category-button.active {
   background-color: #007bff;
   color: #fff;
+}
+
+
+/* Styles for the login card */
+.login-card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+  text-align: center;
+}
+
+.login-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
 }
