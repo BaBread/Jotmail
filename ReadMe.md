@@ -19,6 +19,7 @@ VibeMail is an interactive forem connect with a supportive and empathetic commun
 - Heroku
 - eslintrc.json
 - prettier
+- luxon
 
 # Installation & Database SetUp
 
@@ -37,7 +38,7 @@ In order to use this app on VS, install the node dependencies shown on package.j
 
 # Heroku Deployment
 
-[You can check out my app here](https://vibemail-f86679599564.herokuapp.com/)
+[You can check out the deployed app here](https://vibemail-f86679599564.herokuapp.com/)
 
 # License
 
