@@ -39,22 +39,6 @@ router.delete("/:post_id", async (req, res) => {
   }
 });
 
-// const options = {
-//     url: 'http://localhost:3000/api/home',
-//     method: 'POST',
-//     headers: {
-//       'Accept': 'application/json',
-//       'Content-Type': 'application/json;charset=UTF-8'
-//     },
-//     data: {
-//       name: 'David',
-//       age: 45
-//     }
-//   };
 
-//   axios(options)
-//     .then(response => {
-//       console.log(response.status);
-//     });
 
 module.exports = router;

@@ -19,7 +19,6 @@ const vibeSelected = async (event) => {
   }
 };
 
-//Add an event listener to the "Vibe Selected" button
 
 categoryButtons.forEach((button) => {
   button.addEventListener("click", vibeSelected);

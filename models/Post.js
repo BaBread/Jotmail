@@ -14,10 +14,7 @@ Post.init(
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      // references: {
-      //   model: 'user',
-      //   key: 'id'
-      // }
+      
     },
     vibetype: {
       type: DataTypes.STRING,
@@ -27,7 +24,7 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [0, 1000], // Adjust the minimum and maximum length as needed
+        len: [0, 1000], 
       },
     },
   },
